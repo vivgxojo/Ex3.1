@@ -16,7 +16,15 @@ namespace Ex3._1
         public int NombreDeButs { get; set; }
         public int NombreDeParties { get; set; }
 
-        // Premier constructeur
+        /// <summary>
+        /// Constructeur par paramètres
+        /// </summary>
+        /// <param name="nom">Nom du joueur</param>
+        /// <param name="prenom">Prénom du joueur</param>
+        /// <param name="numero">Numéro dans l'équipe</param>
+        /// <param name="position">Position dans l'équipe</param>
+        /// <param name="nombreDeButs">Nombre du buts</param>
+        /// <param name="nombreDeParties">Nombre de parties jouées</param>
         public Joueur(string nom, string prenom, int numero, string position, int nombreDeButs, int nombreDeParties)
         {
             Nom = nom;
@@ -30,7 +38,11 @@ namespace Ex3._1
         // Deuxième constructeur
         public Joueur() { }
 
-        // Méthode Equals pour comparer deux joueurs
+        /// <summary>
+        /// Méthode Equals pour comparer deux joueurs
+        /// </summary>
+        /// <param name="joueur2">joueur à comparer</param>
+        /// <returns>vrai si tous les attributs sont égaux</returns>
         public bool Equals(Joueur joueur2)
         {
             if( Nom == joueur2.Nom &&

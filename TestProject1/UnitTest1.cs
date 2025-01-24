@@ -49,7 +49,7 @@ namespace TestProject1
 
             // Assert
             Assert.Equal(null, joueur.Nom);// Valeur par défaut pour les string
-            Assert.Equal(null, joueur.Prenom);
+            Assert.Null(joueur.Prenom);
             Assert.Equal(0, joueur.Numero);// Valeur par défaut pour les nombres
             Assert.Equal(null, joueur.Position);
             Assert.Equal(0, joueur.NombreDeButs); 
@@ -96,6 +96,10 @@ namespace TestProject1
             // Assert
             Assert.NotSame(joueurOriginal, joueurCopie); // Vérifie que ce sont deux instances différentes
             Assert.True(joueurOriginal.Equals(joueurCopie)); // Vérifie que les données sont identiques
+
+            Joueur joueur3 = joueurOriginal;
+            Assert.Same(joueurOriginal, joueur3); //Comparer les références
+            Assert.Equal(joueurOriginal, joueur3);
         }
 
         [Fact]
